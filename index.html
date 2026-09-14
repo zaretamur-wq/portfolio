@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zee Dev — Web Design Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#111;color:#eee;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;text-align:center}
+h1{font-size:2rem;margin-bottom:6px}
+p{color:#999;margin-bottom:36px;max-width:520px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:760px;width:100%}
+a.demo{display:block;background:#1c1c1c;border:1px solid #2e2e2e;border-radius:16px;padding:28px 20px;text-decoration:none;color:#eee;transition:transform .15s}
+a.demo:hover{transform:translateY(-3px);border-color:#f59e0b}
+a.demo b{display:block;font-size:1.15rem;margin-bottom:6px}
+a.demo span{color:#888;font-size:.9rem}
+.note{margin-top:36px;color:#777;font-size:.8rem;max-width:520px}
+</style>
+</head>
+<body>
+<h1>Zee Dev</h1>
+<p>Web design portfolio — modern, mobile-friendly sites for small businesses. Tap a demo:</p>
+<div class="cards">
+<a class="demo" href="karachi-kitchen.html"><b>🍛 Karachi Kitchen</b><span>Restaurant website · WhatsApp ordering · mobile-first</span></a>
+<a class="demo" href="glow-salon.html"><b>✨ Glow Ladies Salon</b><span>Salon website · WhatsApp booking · services &amp; pricing</span></a>
+</div>
+<p class="note">Both demos are portfolio concepts built for fictional brands — they showcase layout, responsiveness and WhatsApp-integrated booking/ordering flows. Contact me to build yours.</p>
+</body>
+</html>
