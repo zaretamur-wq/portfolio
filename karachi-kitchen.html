@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karachi Kitchen — Authentic Pakistani Flavours in Deira</title>
+<style>
+:root{--char:#1c1917;--amber:#f59e0b;--cream:#faf6ef;--gold:#d4a017;--green:#166534;--ink:#292524}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{background:var(--char);color:#fff;padding:16px 0;position:sticky;top:0;z-index:10}
+.hrow{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:1.25rem;color:#fff}
+.logo span{color:var(--amber)}
+nav a{color:#e7e5e4;text-decoration:none;margin-left:18px;font-size:.9rem}
+.hero{background:linear-gradient(rgba(23,20,17,.72),rgba(23,20,17,.72)),url('hero-karachi.png') center/cover;min-height:78vh;display:flex;align-items:center;text-align:center;color:#fff;padding:60px 20px}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.15;font-weight:800}
+.hero h1 em{color:var(--amber);font-style:normal}
+.hero p{max-width:600px;margin:18px auto 28px;font-size:1.05rem;color:#e7e5e4}
+.btn{display:inline-block;background:var(--amber);color:#201a09;font-weight:700;text-decoration:none;padding:14px 30px;border-radius:999px;font-size:1rem;box-shadow:0 8px 20px rgba(245,158,11,.35)}
+.btn.sec{background:#fff;color:var(--char);margin-left:10px}
+section{padding:64px 0}
+h2{font-size:1.7rem;margin-bottom:8px;text-align:center}
+.sub{text-align:center;color:#78716c;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 14px rgba(0,0,0,.06);border:1px solid #eee}
+.card .em{font-size:2rem}
+.card h3{margin:10px 0 6px;font-size:1.1rem}
+.card p{color:#78716c;font-size:.9rem}
+.card .price{color:var(--green);font-weight:800;margin-top:10px;display:block}
+.chip{display:inline-block;background:#fef3c7;color:#92400e;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:999px;margin-top:10px}
+.about{background:#fff}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:center}
+.split img{width:100%;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.about p{color:#57534e;margin-bottom:14px}
+.cta{background:var(--char);color:#fff;text-align:center}
+.cta h2{color:#fff}
+.cta p{color:#d6d3d1;margin:12px 0 26px}
+.hours{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:20px}
+.hour{background:#fff;border-radius:12px;padding:18px;text-align:center;border:1px solid #eee}
+.hour b{display:block;font-size:.95rem}
+.hour span{color:#78716c;font-size:.9rem}
+footer{background:#111;color:#a8a29e;padding:28px 20px;text-align:center;font-size:.85rem}
+footer b{color:#e7e5e4}
+.badge{display:inline-block;background:#0e0d0c;border:1px solid #44403c;color:#d6d3d1;font-size:.75rem;padding:5px 14px;border-radius:999px;margin-top:10px}
+@media(max-width:600px){nav{display:none}.btn.sec{margin:12px 0 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap hrow">
+<div class="logo">Karachi <span>Kitchen</span></div>
+<nav><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Visit</a></nav>
+</div></header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Authentic Pakistani Flavours, <em>Made Fresh Daily</em></h1>
+    <p>Karahi, biryani, and kebabs cooked the traditional way — order ahead on WhatsApp and your table is ready when you arrive.</p>
+    <a class="btn" href="https://wa.me/971500000000?text=Hi%20Karachi%20Kitchen%2C%20I%27d%20like%20to%20place%20an%20order">Order on WhatsApp</a>
+    <a class="btn sec" href="#menu">See the Menu</a>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <h2>Guest Favourites</h2>
+    <p class="sub">Slow-cooked, spiced in-house, served with fresh naan from the tandoor</p>
+    <div class="grid">
+      <div class="card"><div class="em">🍛</div><h3>Chicken Karahi</h3><p>Tomato, ginger & green chilli, finished in the wok</p><span class="chip">Bestseller</span><span class="price">AED 45</span></div>
+      <div class="card"><div class="em">🍚</div><h3>Beef Biryani</h3><p>Fragrant layered rice with tender beef and raita</p><span class="price">AED 30</span></div>
+      <div class="card"><div class="em">🍢</div><h3>Seekh Kebab</h3><p>Hand-rolled, charcoal-grilled, mint chutney</p><span class="price">AED 25</span></div>
+      <div class="card"><div class="em">🫓</div><h3>Fresh Naan</h3><p>Butter, garlic or kandhari — from the clay tandoor</p><span class="price">AED 3</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap split">
+    <img src="hero-karachi.png" alt="Pakistani food spread">
+    <div>
+      <h2 style="text-align:left">Cooked Like Home</h2>
+      <p>Every morning we grind our own spices, and every dish is cooked to order. No shortcuts, no reheated curry — just the same recipes families in Karachi have cooked for generations.</p>
+      <p>Busy lunch? Send us your order on WhatsApp and it's ready for pickup in 15 minutes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="visit">
+  <div class="wrap">
+    <h2>Visit Us in Deira</h2>
+    <p>Free parking after 6 PM · Family seating upstairs · Group bookings welcome</p>
+    <a class="btn" href="https://wa.me/971500000000?text=Hi%20Karachi%20Kitchen%2C%20I%27d%20like%20to%20book%20a%20table">Reserve a Table</a>
+    <div class="hours">
+      <div class="hour"><b>Mon – Thu</b><span>11:00 – 12:00</span></div>
+      <div class="hour"><b>Fri – Sat</b><span>11:00 – 1:00</span></div>
+      <div class="hour"><b>Sunday</b><span>12:00 – 12:00</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>Karachi Kitchen</b> · Deira, Dubai · +971 50 000 0000
+  <br><span class="badge">Portfolio concept demo — fictional brand</span>
+</footer>
+</body>
+</html>
