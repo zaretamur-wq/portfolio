@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VELOCE DRIVE — Car Rental Concept, Dubai</title>
+<meta name="description" content="Veloce Drive car rental concept site. Scroll-animated one-page web design demo.">
+<style>
+:root{--bg:#07080c;--ink:#f4f0e6;--gold:#a68f6d;--dim:#8a8578;--line:rgba(166,143,109,.25)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+h1,h2,.serif{font-family:Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:-.5px}
+a{color:inherit}
+
+/* progress bar */
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),#d9c39a);z-index:99;transition:width .1s linear}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(7,8,12,.9),transparent)}
+.brand{font-weight:800;letter-spacing:2px;font-size:.95rem}.brand b{color:var(--gold)}
+.nav-links{display:flex;gap:18px;font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase}
+.nav-links a{text-decoration:none;color:var(--dim);transition:color .3s}
+.nav-links a:hover{color:var(--gold)}
+@media(max-width:700px){.nav-links{display:none}}
+
+/* hero */
+header{height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://media.base44.com/images/public/6aa5f73cd34cddc940406a19/49c2caeae_generated_image.png') center/cover;will-change:transform;animation:heroZoom 16s ease-in-out infinite alternate}
+@keyframes heroZoom{from{transform:scale(1.05)}to{transform:scale(1.18)}}
+.hero-ol{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,12,.75),rgba(7,8,12,.35) 45%,var(--bg))}
+.hero-in{position:relative;z-index:2;width:100%}
+.kicker{display:inline-block;border:1px solid var(--line);color:var(--gold);padding:8px 18px;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:26px}
+header h1{font-size:clamp(3rem,10vw,6.2rem);line-height:1.02;letter-spacing:-1px}
+header h1 span{display:block;color:var(--gold)}
+header h1 span:last-child{color:var(--ink)}
+.lead{max-width:480px;color:#cfc9bb;margin:22px 0 34px;font-size:1.05rem}
+.btn{display:inline-block;padding:16px 34px;border-radius:999px;text-decoration:none;font-weight:800;letter-spacing:1px;transition:transform .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-3px)}
+.btn-gold{background:var(--gold);color:#0c0d12;box-shadow:0 10px 30px rgba(166,143,109,.35)}
+.btn-ghost{border:2px solid var(--line);margin-left:12px}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--gold);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;animation:bob 2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
+
+/* reveal engine */
+.rv{opacity:0;transform:translateY(46px);transition:opacity .9s cubic-bezier(.2,.7,.3,1),transform .9s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+.rv-l{transform:translateX(-60px)}.rv-r{transform:translateX(60px)}
+.rv-l.in,.rv-r.in{transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+
+section{padding:96px 0;position:relative}
+.num{position:absolute;top:38px;right:22px;color:var(--dim);font-size:.78rem;letter-spacing:3px;text-transform:uppercase}
+h2{font-size:clamp(2rem,5vw,3.2rem);line-height:1.08}
+h2 em{color:var(--gold);font-style:normal}
+.rule{width:70px;height:3px;background:var(--gold);margin:18px 0 22px;border-radius:2px}
+.sec-lead{color:#b6b0a2;max-width:520px}
+
+/* stats */
+.stats{display:flex;gap:34px;flex-wrap:wrap;margin-top:44px}
+.stat b{font-size:2.6rem;font-family:Georgia,serif;color:var(--gold)}
+.stat span{display:block;color:var(--dim);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;margin-top:4px}
+
+/* fleet */
+.fleet{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin-top:50px}
+.car{background:#0d0e14;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .4s,box-shadow .4s,border-color .4s}
+.car:hover{transform:translateY(-10px);box-shadow:0 24px 60px rgba(0,0,0,.5);border-color:var(--gold)}
+.car-img{height:210px;overflow:hidden}
+.car-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.car:hover .car-img img{transform:scale(1.1)}
+.car-body{padding:20px 22px 24px}
+.car-body h3{font-family:Georgia,serif;font-size:1.25rem;margin-bottom:6px}
+.car-body .tag{color:var(--gold);font-size:.72rem;letter-spacing:2.5px;text-transform:uppercase}
+.car-body .price{margin-top:12px;font-weight:800;color:var(--ink)}
+.car-body .price small{color:var(--dim);font-weight:400}
+
+/* marquee */
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;background:#0a0b10}
+.marquee-track{display:flex;gap:70px;width:max-content;animation:slide 22s linear infinite;white-space:nowrap}
+.marquee-track span{color:var(--dim);letter-spacing:4px;font-size:.85rem;text-transform:uppercase}
+.marquee-track b{color:var(--gold)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* how */
+.steps{margin-top:46px;display:grid;gap:22px}
+.step{display:flex;gap:22px;align-items:flex-start;background:#0d0e14;border:1px solid var(--line);border-radius:16px;padding:26px}
+.step-n{font-family:Georgia,serif;font-size:1.9rem;color:var(--gold);min-width:52px}
+.step h3{font-size:1.05rem;margin-bottom:5px}
+.step p{color:var(--dim);font-size:.92rem}
+
+/* cta */
+.cta{text-align:center;background:radial-gradient(ellipse at 50% 0%,#14161f 0%,var(--bg) 65%)}
+.cta h2{font-size:clamp(2.2rem,6vw,3.8rem)}
+.cta p{color:#b6b0a2;max-width:440px;margin:16px auto 34px}
+
+footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--dim);font-size:.8rem}
+footer b{color:var(--gold)}
+.disc{max-width:640px;margin:0 auto 10px;font-style:italic;color:#6f6a5e}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav>
+  <div class="brand">VELOCE <b>DRIVE</b></div>
+  <div class="nav-links"><a href="#fleet">Fleet</a><a href="#how">How it works</a><a href="#book">Book</a></div>
+</nav>
+
+<header id="top">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-ol"></div>
+  <div class="hero-in wrap">
+    <div class="kicker rv in">Car rental concept · Dubai</div>
+    <h1><span>DRIVE</span><span>THE CITY.</span></h1>
+    <p class="lead">Premium rentals, delivered to your door. From daily drives to weekend escapes — scroll to feel the experience.</p>
+    <a href="#fleet" class="btn btn-gold">VIEW THE FLEET</a>
+    <a href="#book" class="btn btn-ghost">BOOK NOW</a>
+  </div>
+  <div class="scroll-hint">Scroll to experience ↓</div>
+</header>
+
+<section id="fleet" class="wrap">
+  <div class="num">01 — The fleet</div>
+  <h2 class="rv">CARS THAT <em>TURN HEADS.</em></h2>
+  <div class="rule rv d1"></div>
+  <p class="sec-lead rv d2">Sports coupés, luxury SUVs and executive saloons — every car detailed, insured and ready same-day.</p>
+  <div class="stats rv d3">
+    <div class="stat"><b data-count="120">0</b><span>Cars ready</span></div>
+    <div class="stat"><b data-count="24">0</b><span>Hour delivery</span></div>
+    <div class="stat"><b data-count="15">0</b><span>Min booking</span></div>
+  </div>
+  <div class="fleet">
+    <div class="car rv rv-l">
+      <div class="car-img"><img src="https://media.base44.com/images/public/6aa5f73cd34cddc940406a19/49c2caeae_generated_image.png" alt="Sports coupé at night in Dubai"></div>
+      <div class="car-body"><div class="tag">Sports Coupé</div><h3>Velocità GT</h3><p style="color:var(--dim);font-size:.88rem">Sleek, fast, unmistakable — Dubai nights were made for this.</p><div class="price">AED 450 <small>/ day</small></div></div>
+    </div>
+    <div class="car rv d1">
+      <div class="car-img"><img src="https://media.base44.com/images/public/6aa5f73cd34cddc940406a19/eb857a0ea_generated_image.png" alt="Luxury SUV on Dubai highway"></div>
+      <div class="car-body"><div class="tag">Luxury SUV</div><h3>Alto XL</h3><p style="color:var(--dim);font-size:.88rem">Room for the whole crew, presence for every valet line.</p><div class="price">AED 380 <small>/ day</small></div></div>
+    </div>
+    <div class="car rv rv-r d2">
+      <div class="car-img"><img src="https://media.base44.com/images/public/6aa5f73cd34cddc940406a19/bd4f2921f_generated_image.png" alt="Premium car interior at night"></div>
+      <div class="car-body"><div class="tag">Executive Saloon</div><h3>Sera V</h3><p style="color:var(--dim);font-size:.88rem">Business-class comfort with a cockpit that glows at midnight.</p><div class="price">AED 300 <small>/ day</small></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div class="marquee-track">
+  <span>Full insurance <b>included</b></span><span>Free delivery <b>in Dubai</b></span><span>No deposit <b>for residents</b></span><span>24/7 roadside <b>support</b></span><span>Unlimited km <b>options</b></span>
+  <span>Full insurance <b>included</b></span><span>Free delivery <b>in Dubai</b></span><span>No deposit <b>for residents</b></span><span>24/7 roadside <b>support</b></span><span>Unlimited km <b>options</b></span>
+</div></div>
+
+<section id="how" class="wrap">
+  <div class="num">02 — How it works</div>
+  <h2 class="rv">BOOKED IN <em>THREE TAPS.</em></h2>
+  <div class="rule rv d1"></div>
+  <div class="steps">
+    <div class="step rv rv-l"><div class="step-n">01</div><div><h3>Choose your car</h3><p>Pick a date, browse the live fleet, and lock your car in seconds.</p></div></div>
+    <div class="step rv d1"><div class="step-n">02</div><div><h3>We deliver to you</h3><p>Airport, hotel, or your doorstep — anywhere in Dubai, any hour.</p></div></div>
+    <div class="step rv rv-r d2"><div class="step-n">03</div><div><h3>Drive. Extend. Return.</h3><p>Extend from your phone if plans change. We collect the car when you're done.</p></div></div>
+  </div>
+</section>
+
+<section id="book" class="cta">
+  <div class="num">03 — Book</div>
+  <h2 class="rv">YOUR KEYS ARE <em>WAITING.</em></h2>
+  <p class="rv d1">Same-day rentals across Dubai. Message us and a car is on its way.</p>
+  <a href="#" class="btn btn-gold rv d2">BOOK ON WHATSAPP</a>
+</section>
+
+<footer>
+  <p class="disc">Unofficial concept website created as a design sample. VELOCE DRIVE is a fictional brand — not affiliated with any real business. Cars, prices and details shown are sample content for illustration only.</p>
+  <p>Web design concept · <b>Zee Dev</b></p>
+</footer>
+
+<script>
+// scroll reveal engine
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv:not(.in)').forEach(el=>io.observe(el));
+// hero parallax
+const bg=document.getElementById('heroBg');
+addEventListener('scroll',()=>{bg.style.transform=`scale(1.1) translateY(${scrollY*.35}px)`},{passive:true});
+// progress bar
+addEventListener('scroll',()=>{const h=document.body.scrollHeight-innerHeight;document.getElementById('bar').style.width=(scrollY/h*100)+'%'},{passive:true});
+// animated counters
+const cio=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,t=+el.dataset.count;let n=0;const step=t/40;const iv=setInterval(()=>{n+=step;if(n>=t){n=t;clearInterval(iv)}el.textContent=Math.round(n)},25);cio.unobserve(el)})},{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>
